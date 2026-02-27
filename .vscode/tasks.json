@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Maven: Run App",
+      "type": "shell",
+      "command": "mvn -Dexec.mainClass=com.manish.App exec:java",
+      "group": "none",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Maven: Run Edit",
+      "type": "shell",
+      "command": "mvn -Dexec.mainClass=com.manish.Edit exec:java",
+      "group": "none",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Maven: Run Create",
+      "type": "shell",
+      "command": "mvn -Dexec.mainClass=com.manish.CREATE exec:java",
+      "group": "none",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Maven: Package Fat JAR",
+      "type": "shell",
+      "command": "mvn -Dexec.mainClass=${exec.mainClass} -DskipTests package",
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    }
+  ]
+}
